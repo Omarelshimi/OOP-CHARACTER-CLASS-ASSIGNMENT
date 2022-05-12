@@ -1,0 +1,32 @@
+
+# Define Character Class
+
+class character:
+     def __init__(self, initname, initphrase1, initphrase2, initlevel):
+          #Properties (State)
+          self.name = initname
+          self.phrase1 = initphrase1
+          self.phrase2 = initphrase2
+          self.level = initlevel
+          initlevel = 0
+
+     # Methods (Behavior)
+     def speak(self, phraseNum):    
+          if phraseNum == 1:
+               print(self.phrase1)
+          elif phraseNum == 2:
+               print(self.phrase2)
+               
+     def setLevel(self, newLevel):
+          self.level = newLevel
+          print(newLevel)
+          
+     def printPt(self):
+        print(f"{self.name} {self.phrase1} {self.phrase2} {self.level}")
+          
+kungFuPanda = character("Po", "Skadoosh", " You have been blinded by pure awesomeness!", 0)
+spiderMan = character("Spiderman","My Spider-Sense is tingling", "Your friendly neighbourhood spiderman.", 5)
+
+kungFuPanda.speak(1)
+kungFuPanda.setLevel(2)
+spiderMan.speak(2)
